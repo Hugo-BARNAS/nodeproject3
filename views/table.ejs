@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/asset/style.css">
+    <title>Table de multiplication</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td></td><!--  carré vide à gauche -->
+            <% for(let i=0;i<=colonnes;i++){ %>
+            <th scope="col"><%= i%></th>
+            <% } %>
+        </tr>
+        <% for(let i=0; i<=lignes; i++) {%>
+        <tr>
+            <th scope="row"><%= i %></th>
+            <% for(let j=0; j<=colonnes;j++){%>
+            <td><%= i*j %></td>
+            <%}%>
+        </tr>
+        
+        <%}%>
+
+    </table>
+</body>
+
+</html>
